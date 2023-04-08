@@ -15,4 +15,11 @@ public class Page {
 		this.location = location;
 	}
 
+	/**
+	 * Pages return their contents through {@link #toString()}.
+	 */
+	@Override
+	public String toString() {
+		return "";
+	}
 }
