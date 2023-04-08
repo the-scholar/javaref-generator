@@ -1,6 +1,6 @@
 package scholar.generators.javaref.api;
 
-public class Page {
+public abstract class Page implements Element {
 	private String location;
 
 	public Page(String location) {
@@ -15,11 +15,4 @@ public class Page {
 		this.location = location;
 	}
 
-	/**
-	 * Pages return their contents through {@link #toString()}.
-	 */
-	@Override
-	public String toString() {
-		return "";
-	}
 }
