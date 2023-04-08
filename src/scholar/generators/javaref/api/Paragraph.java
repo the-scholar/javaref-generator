@@ -1,9 +1,16 @@
 package scholar.generators.javaref.api;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
+import java.util.Set;
 
+/**
+ * Generic {@link Paragraph} element. Can have any number of arbitrary classes
+ * added to it. Duplicate classes are ignored.
+ * 
+ * @author The Scholar
+ *
+ */
 public class Paragraph implements Element {
 
 	private String content;
@@ -20,9 +27,9 @@ public class Paragraph implements Element {
 		this.content = content;
 	}
 
-	private final List<String> classes = new ArrayList<>();
+	private final Set<String> classes = new HashSet<>();
 
-	public List<String> getClasses() {
+	public Set<String> getClasses() {
 		return classes;
 	}
 
