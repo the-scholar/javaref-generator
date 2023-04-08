@@ -22,21 +22,15 @@ public class SyntaxPage {
 	 */
 	private final String conceptDescription;
 	/**
-	 * Content that comes after the {@link #conceptDescription}, but before the
-	 * syntax section.
-	 */
-	private final String additionalDescription;
-	/**
 	 * The Syntax section of the page. Required.
 	 */
 	private final SyntaxSection syntaxSection;
 
-	public SyntaxPage(String location, String title, String conceptDescription, String additionalDescription,
-			SyntaxSection syntaxSection, String[] notes) {
+	public SyntaxPage(String location, String title, String conceptDescription, SyntaxSection syntaxSection,
+			String[] notes) {
 		this.location = location;
 		this.title = title;
 		this.conceptDescription = conceptDescription;
-		this.additionalDescription = additionalDescription;
 		this.syntaxSection = syntaxSection;
 		this.notes = notes;
 	}
@@ -95,8 +89,6 @@ public class SyntaxPage {
 		sb.append("\t<h1>").append(title).append("</h1>");
 		if (conceptDescription != null)
 			sb.append("<p class=\"description\">").append(conceptDescription).append("</p>\n");
-		if (additionalDescription != null)
-			sb.append(additionalDescription).append('\n');
 
 		sb.append("<table class=\"syntax\">\n");
 		for (var s : syntaxSection.fragments)
