@@ -15,8 +15,10 @@ public class Paragraph implements Element {
 
 	private String content;
 
-	public Paragraph(String content) {
+	public Paragraph(String content, String... classes) {
 		this.content = content;
+		for (String s : classes)
+			this.classes.add(s);
 	}
 
 	public String getContent() {
